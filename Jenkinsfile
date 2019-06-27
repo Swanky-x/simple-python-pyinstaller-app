@@ -34,11 +34,11 @@ pipeline {
             }
             steps {
                 sh 'pyinstaller --onefile sources/add2vals.py'
-                sh './add2vals.py 10 5'
             }
             post {
                 success {
                     archiveArtifacts 'dist/add2vals'
+                    sh './add2vals 10 5'
                 }
             }
         }                
