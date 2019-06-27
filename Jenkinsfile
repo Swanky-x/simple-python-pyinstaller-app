@@ -39,7 +39,8 @@ pipeline {
                 success {
                     archiveArtifacts 'dist/add2vals'
                     sh 'dist/./add2vals 10 5 > dist/result.txt'
-            }
-        }                
+                }
+            }                   
+        }
     }
 }
