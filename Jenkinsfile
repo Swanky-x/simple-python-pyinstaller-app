@@ -38,7 +38,7 @@ pipeline {
             post {
                 success {
                     archiveArtifacts 'dist/add2vals'
-                    sh './add2vals 10 5'
+                    sh 'dist/./add2vals 10 5'
                 }
             }
         }                
