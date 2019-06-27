@@ -38,9 +38,7 @@ pipeline {
             post {
                 success {
                     archiveArtifacts 'dist/add2vals'
-                    sh 'var = dist/./add2vals 10 5'
-                    sh 'touch /var/www/html/nginx/cgi-bin/index.html'
-                    sh 'echo var > /var/www/html/nginx/cgi-bin/index.html'
+                    sh 'dist/./add2vals 10 5 > /var/www/html/nginx/cgi-bin/index.html'
             }
         }                
     }
