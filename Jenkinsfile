@@ -34,8 +34,6 @@ pipeline {
             }
             steps {
                 sh 'pyinstaller --onefile sources/add2vals.py'
-            }
-            steps {
                 sh './add2vals.py 10 5'
             }
             post {
